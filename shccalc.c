@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+char code[] = "\xeb\x0e\xba\xad\x23\x86\x7c\xff\xd2\xba\xfa\xca\x81\x7c\xff\xd2\xe8\xed\xff\xff\xff\x63\x61\x6c\x63\x00";               
+ 
+int main()
+{	
+	int (*func)();
+	func = (int (*)()) code;
+	(int)(*func)();
+} 
